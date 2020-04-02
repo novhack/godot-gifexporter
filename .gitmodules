@@ -1,0 +1,6 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = https://github.com/GodotNativeTools/godot-cpp.git
+[submodule "gifanimcplusplus"]
+	path = gifanimcplusplus
+	url = https://github.com/fyngyrz/gifanimcplusplus.git
