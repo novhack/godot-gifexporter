@@ -2,7 +2,7 @@
 Plugin adding a GifExporter singleton enabling export of Image objects as a GIF file.
 
 ### Installation:
-1. Clone this repository into your Godot projects addons folder.
+1. Clone this repository into your Godot projects addons folder - GDNative builds are already included in the repository.
 2. Enable this plugin in Project Settings.
 3. A new node `GifExporter` will now become available.
 
@@ -33,7 +33,7 @@ First create a new instance of GifExport node. Then you can call these methods:
 `GifExporter.end_export()`
 
 ### Compilation on Linux:
-1. Compile godot_cpp
+1. Init and compile godot_cpp submodule
   - Linux target uses GCC by default
   - `scons platform=linux generate_bindings=yes target=release bits=32`
   - `scons platform=linux generate_bindings=yes target=release bits=64`
