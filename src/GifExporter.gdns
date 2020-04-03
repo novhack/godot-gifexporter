@@ -1,11 +1,7 @@
 [gd_resource type="NativeScript" load_steps=2 format=2]
 
-[sub_resource type="GDNativeLibrary" id=1]
-entry/X11.64 = "res://addons/godot-gifexporter/bin/x11/libgifexporter.x11.64.so"
-entry/X11.32 = "res://addons/godot-gifexporter/bin/x11/libgifexporter.x11.32.so"
-dependency/X11.64 = [  ]
-dependency/X11.32 = [  ]
+[ext_resource path="res://addons/godot-gifexporter/src/GifExporter.gdnlib" type="GDNativeLibrary" id=1]
 
 [resource]
 class_name = "GifExporter"
-library = SubResource( 1 )
+library = ExtResource( 1 )

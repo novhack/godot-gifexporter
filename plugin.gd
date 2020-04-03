@@ -2,8 +2,7 @@ tool
 extends EditorPlugin
 
 func _enter_tree():
-	add_autoload_singleton("GifExporter", "res://addons/godot-gifexporter/src/GifExporter.gd")
-
+	add_custom_type("GifExporter", "Node", preload("res://addons/godot-gifexporter/src/GifExporter.gd"), Texture.new())
 
 func _exit_tree():
-	remove_autoload_singleton("GifExporter")
+	remove_custom_type("GifExporter")
