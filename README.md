@@ -4,9 +4,11 @@ Plugin adding a GifExporter singleton enabling export of Image objects as a GIF 
 ### Installation:
 1. Clone this repository into your Godot projects addons folder.
 2. Enable this plugin in Project Settings.
-3. A new singleton `GifExporter` will now be available in all scripts.
+3. A new node `GifExporter` will now become available.
 
 ### Usage:
+First create a new instance of GifExport node. Then you can call these methods:
+
 1. Starts gif export:
 
 `GifExporter.begin_export(filename: String, width: int, height: int, frame_delay: float, loop_count: int = 0, bit_depth: int = 8, dither: bool = false)`
@@ -47,7 +49,7 @@ Plugin adding a GifExporter singleton enabling export of Image objects as a GIF 
   - `scons p=windows bits=64`
     - Windows libraries in bin/win have to have their suffix changed to .dll
   
-3. Strip all resulting binaries of symbols with `strip` tool
+3. Strip all resulting binaries of symbols with `strip` tool to greatly reduce size (godot-cpp seems to include a lot of symbols even in the release build)
 
 ### Changes to gifanimcplusplus
 - This plugin uses https://github.com/fyngyrz/gifanimcplusplus
