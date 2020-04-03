@@ -30,6 +30,24 @@ Plugin adding a GifExporter singleton enabling export of Image objects as a GIF 
 
 `GifExporter.end_export()`
 
+### Compilation on Linux:
+1. Compile godot_cpp
+  - Linux target uses GCC by default
+  - `scons platform=linux generate_bindings=yes target=release bits=32`
+  - `scons platform=linux generate_bindings=yes target=release bits=64`
+  - Windows target requires mingw32 (on Arch in AUR as mingw-w64-gcc package)
+  - `scons platform=windows generate_bindings=yes target=release bits=32`
+  - `scons platform=windows generate_bindings=yes target=release bits=64`
+  
+2. Compile gifexporter
+  - I assume all prerequisities from the previous step are installed
+  - `scons p=x11 bits=32`
+  - `scons p=x11 bits=64`
+  - `scons p=windows bits=32`
+  - `scons p=windows bits=64`
+  
+3. Strip all resulting binaries of symbols with `strip` tool
+
 ### Changes to gifanimcplusplus
 - This plugin uses https://github.com/fyngyrz/gifanimcplusplus
 - Added includes of `cstding` and `cstring` libraries to `gifanim.h`
