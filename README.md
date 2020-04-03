@@ -45,6 +45,7 @@ Plugin adding a GifExporter singleton enabling export of Image objects as a GIF 
   - `scons p=x11 bits=64`
   - `scons p=windows bits=32`
   - `scons p=windows bits=64`
+    - Windows libraries in bin/win have to have their suffix changed to .dll
   
 3. Strip all resulting binaries of symbols with `strip` tool
 
