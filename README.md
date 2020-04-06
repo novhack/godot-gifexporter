@@ -1,5 +1,6 @@
 # godot-gifexporter
 Plugin adding a GifExporter singleton enabling export of Image objects as a GIF file.
+Currently supports Windows and Linux, both 32 and 64 bit.
 
 ### Installation:
 1. Clone this repository into your Godot projects addons folder - GDNative builds are already included in the repository.
@@ -11,13 +12,15 @@ First create a new instance of GifExport node. Then you can call these methods:
 
 1. Starts gif export:
 
-`GifExporter.begin_export(filename: String, width: int, height: int, frame_delay: float, loop_count: int = 0, bit_depth: int = 8, dither: bool = false)`
+`GifExporter.begin_export(filename: String, width: int, height: int, frame_delay: float, loop_count: int = 0, bit_depth: int = 8, dither: bool = false) -> bool`
 - filename - full path with a filename ('/home/user/anim.gif')
 - width, height - default frame dimmensions
 - frame_delay - default delay between animation frames
 - loop_count - how many times is animation repeated - 0 is infinite
 - bit_depth - default frame color bit depth
 - dither - default apply dithering algorithm to frames
+
+The function returns false if it's called on an unsupported platform, true otherwise.
 
 2. Adds a frame to gif:
 
