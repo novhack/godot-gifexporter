@@ -51,6 +51,7 @@ elif env['platform'] in ('x11', 'linux'):
     target_path += 'x11/'
     cpp_library += '.linux'
     env.Append(CCFLAGS=['-fPIC', '-O3', '-std=c++14'])
+    env.Append(LINKFLAGS=['-static-libgcc', '-static-libstdc++'])
 
     if env['bits'] == '32':
         env.Append(CCFLAGS=['-m32'])
