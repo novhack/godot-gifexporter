@@ -1,4 +1,6 @@
 # godot-gifexporter
+## This plugin is now depracated in favor of pure GDScript implementation by jegor377 https://github.com/jegor377/godot-gdgifexporter
+
 Plugin adding a GifExporter singleton enabling export of Image objects as a GIF file.
 Currently supports Windows and Linux, both 32 and 64 bit.
 
